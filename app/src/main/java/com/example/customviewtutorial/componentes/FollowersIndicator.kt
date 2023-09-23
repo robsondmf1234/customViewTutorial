@@ -15,15 +15,10 @@ class FollowersIndicator(context: Context, attrs: AttributeSet) : LinearLayout(c
     )
 
     init {
-        val attributes = context.obtainStyledAttributes(attrs, R.styleable.FollowersIndicator)
-
-        binding.tvCounter.text = attributes.getString(R.styleable.FollowersIndicator_counter)
-        binding.tvIndicator.text = attributes.getString(R.styleable.FollowersIndicator_indicator)
-
-        if (attributes.getBoolean(R.styleable.FollowersIndicator_bold, true)) {
-            binding.tvCounter.setTypeface(Typeface.DEFAULT_BOLD)
-        } else {
-            binding.tvCounter.setTypeface(Typeface.DEFAULT)
+        context.obtainStyledAttributes(attrs, R.styleable.FollowersIndicator).apply {
+            getString(R.styleable.FollowersIndicator_counter)?.let { setCounter(it) }
+            getString(R.styleable.FollowersIndicator_indicator)?.let { setIndicator(it) }
+            setBold(getBoolean(R.styleable.FollowersIndicator_bold, true))
         }
     }
 
@@ -35,7 +30,7 @@ class FollowersIndicator(context: Context, attrs: AttributeSet) : LinearLayout(c
         binding.tvIndicator.text = indicator
     }
 
-    fun isBold(isBold: Boolean) {
+    fun setBold(isBold: Boolean) {
         if (isBold) {
             binding.tvCounter.setTypeface(Typeface.DEFAULT_BOLD)
         } else {

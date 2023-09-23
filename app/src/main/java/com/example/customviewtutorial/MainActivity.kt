@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.followerrsIndicator.setCounter("1.5M")
         binding.followerrsIndicator.setIndicator("Followers")
-        binding.followerrsIndicator.isBold(false)
+        binding.followerrsIndicator.setBold(true)
     }
 }
