@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--XML para definir quais atributos teremos e tipos teremos em nosso custom view -->
 <resources>
 
     <declare-styleable name="FollowersIndicator">
