@@ -9,11 +9,21 @@
 
     <com.example.customviewtutorial.componentes.FollowersIndicator
         android:id="@+id/followerrs_indicator"
-        app:counter="550"
-        app:indicator="Publicacões"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        app:counter="550"
+        app:indicator="Publicacões"
+        app:layout_constraintStart_toStartOf="@id/profile_image"
+        app:layout_constraintEnd_toEndOf="@id/profile_image"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.customviewtutorial.componentes.ProfileImage
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        app:visualized="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/followerrs_indicator"
+        app:src="@drawable/ryu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

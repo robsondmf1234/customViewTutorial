@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--XML para definir quais atributos teremos e tipos teremos em nosso custom view -->
+<?xml version="1.0" encoding="utf-8"?><!--XML para definir quais atributos teremos e tipos teremos em nosso custom view -->
 <resources>
 
     <declare-styleable name="FollowersIndicator">
@@ -8,6 +7,11 @@
         <attr name="indicator" format="string" />
         <attr name="bold" format="boolean" />
 
+    </declare-styleable>
+
+    <declare-styleable name="ProfileImage">
+        <attr name="src" format="reference" />
+        <attr name="visualized" format="boolean" />
     </declare-styleable>
 
 </resources>
